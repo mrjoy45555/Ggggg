@@ -1,37 +1,30 @@
 {
   "name": "JOY-BOT",
-  "version": "10.1.1",
-  "description": "MADE BY JOY AHMED",
-  "main": "JOY.js",
+  "version": "5.0.0",
+  "description": "MIRAI BOT NEW VERSION COOKIES JOY-BOT",
+  "main": "index.js",
+  "author": {
+    "name": "JOY AHMED",
+    "email": "joyahmedtt@gmail.com",
+    "url": "https://www.facebook.com/100000482524747"
+  },
+  "license": "MIT",
   "engines": {
     "node": "20.x",
-    "npm": "10.0.0"
+    "npm": ">=10.0.0"
   },
   "scripts": {
     "start": "node index.js",
-    "login": "node login",
-    "test": "node --trace-warnings --use_strict --async-stack-traces mirai"
+    "dev": "nodemon index.js",
+    "login": "node login.js",
+    "pm2": "pm2 start index.js --name MIRAI-BOT",
+    "pm2-stop": "pm2 stop MIRAI-BOT",
+    "pm2-restart": "pm2 restart MIRAI-BOT",
+    "pm2-logs": "pm2 logs MIRAI-BOT",
+    "clean": "rm -rf node_modules package-lock.json && npm install",
+    "update": "npm update --save",
+    "audit-fix": "npm audit fix --force"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/JUBAED-AHMED-JOY/JOY-BOT V4/issues"
-  },
-  "keywords": [
-    "bot",
-    "facebook",
-    "project",
-    "messenger",
-    "javasvript",
-    "gok",
-    "prince",
-    "mental"
-  ],
-  "author": "JOY-AHMED",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/JUBAED-AHMED-JOY/JOY-BOT V4/issues"
-  },
-  "homepage": "https://github.com/JUBAED-AHMED-JOY/JOY-BOT V4/issues",
   "dependencies": {
     "@distube/ytdl-core": "^4.13.2",
     "@miraipr0ject/assets": "^1.0.9",
@@ -62,6 +55,7 @@
     "form-data": "^4.0.0",
     "fs-extra": "^10.1.0",
     "googlethis": "^1.2.9",
+    "gradient-string": "^3.0.0",
     "idioms": "0.0.2",
     "image-downloader": "^4.3.0",
     "jimp": "^0.16.13",
@@ -112,7 +106,7 @@
     "wikijs": "^6.3.3",
     "youtube-search-api": "^1.1.0",
     "youtubei.js": "^1.4.5",
-    "yt-search": "^2.13.1",
+    "yt-search": "^2.10.4",
     "ytdl-core": "^4.11.2",
     "zalgo": "0.0.1"
   }
